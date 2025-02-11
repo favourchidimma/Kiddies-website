@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    <header class="px-[100px] py-6 flex justify-between items-center border border-b border-grey">
+    <header class="px-[50px] py-6 flex justify-between items-center border border-b border-grey">
         <h1 class="text-3xl font-bold bg-black text-white py-4 px-2 rounded">KD</h1>
 
-        <nav>
-            <ul class="flex gap-12 text-xl items-center">
-                <li class="font-bold text-xl text-light-blue">Sign Up</li>
+        <i class="fas fa-bars" id="openMenu"></i>
+        <i class="fas fa-times" id="closeMenu"></i>
+        <nav id="navMenu" class="absolute hidden gap-3">
+            <ul class="flex gap-12 text-xl items-center md:flex-col bg-black">
+                <li class="font-bold text-xl text-light-blue ">Sign Up</li>
                 <li class="font-bold text-xl text-white bg-light-blue py-2 px-6 rounded-[32px]">Login</li>
             </ul>
         </nav>
     </header>
 
     <main class="">
-        <section class="py-[144px] flex justify-between px-[100px]">
+        <section class="py-[144px] flex justify-between px-[50px]">
             <div class=" flex flex-col">
                 <h1 class="text-7xl font-extrabold w-[60%]"> <span class="text-pink">Learning</span> while having fun</h1>
-                <p class="text-lg text-[#2D2D2D] mt-[23px] w-[50%]">Join over 70 kids to learn and create amazing stuffs and become better in your area of interest.</p>
-                <div class="mt-[100px]">
+                <p class="text-lg text-[#2D2D2D] mt-4 max-w-lg mx-auto md:mx-0 mobile:text-sm ">Join over 70 kids to learn and create amazing stuffs and become better in your area of interest.</p>
+                <div class="mt-[100px] flex gap-5">
                     <button class="bg-[#6482DD] text-white btns">Join the fun</button>
                     <button class="text-[#5F9CFF] border border-[#5F9CFF] btns">Watch a video</button>
                 </div>
@@ -33,60 +37,99 @@
             </div>
         </section>
 
-        <section class="py-[52px] bg-[#EEF2FF] mx-0 px-[100px]">
-            <h2 class="text-4xl font-semibold">10 Best Students</h2>
-            <p class="text-[#2D2D2D] text-xl font-normal mt-4 w-[25%]">Some students are already moving up the table with their awesome performances.</p>
-            <div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>S/N</th>
-                            <th>First Name</th>
-                            <th>Surname</th>
-                            <th>Gender</th>
-                            <th>Favourite Color</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mirabel</td>
-                            <td>Okoro</td>
-                            <td>Female</td>
-                            <td>Yellow</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Kenny</td>
-                            <td>Anochie</td>
-                            <td>Male</td>
-                            <td>Blue</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Adam</td>
-                            <td>John</td>
-                            <td>Male</td>
-                            <td>Yellow</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Cynthia</td>
-                            <td>Babalola</td>
-                            <td>Female</td>
-                            <td>Pink</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Elvis</td>
-                            <td>Obi</td>
-                            <td>Male</td>
-                            <td>Purple</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <section class="py-[52px] bg-[#EEF2FF] px-[100px] flex justify-between gap-36 mobile:flex-col mobile:px-4">
+            <div class="overflow-x-auto">
+                <h2 class="text-4xl font-semibold">10 Best Students</h2>
+                <p class="text-xl font-thin  mt-4 max-w-lg mx-auto  mobile:text-sm ">Some students are already moving up the table with their awesome performances.</p>    
+                
+            <div class="mobile:overflow-auto max-w-full">
+                <table class="mobile:table-auto w-full">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>First Name</th>
+                        <th>Surname</th>
+                        <th>Gender</th>
+                        <th>Favourite Color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mirabel</td>
+                        <td>Okoro</td>
+                        <td>Female</td>
+                        <td>Yellow</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Kenny</td>
+                        <td>Anochie</td>
+                        <td>Male</td>
+                        <td>Blue</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Adam</td>
+                        <td>John</td>
+                        <td>Male</td>
+                        <td>Yellow</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Cynthia</td>
+                        <td>Babalola</td>
+                        <td>Female</td>
+                        <td>Pink</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Elvis</td>
+                        <td>Obi</td>
+                        <td>Male</td>
+                        <td>Purple</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+        </div>       
+                <div class="items-center mx-auto ms-5 py-[100px] w-full mobile:py-10">
+                    <img src="../assets/kid graduating.png" alt="Image">
+                </div>
+            </section>
+            <section class="py-5">
+                <div>
+                    <p class="my-5 font-semibold text-3xl py-5 justify-center text-center ">Meet The School Masters</p>
+                 </div>
+                 <section>
+                     <div class="flex justify-between w-[300px] mobile:w-20 px-4 mx-4 gap-6">
+                         <img src="../assets/Chioma.png" alt="frame">
+                         <img src="../assets/Daniel.png" alt="image">
+                         <img src="../assets/Adaora.png" alt="image">
+                         <img src="../assets/Desmond.png" alt="image">
+                     </div>   
+                 </section>
+           </section>
+           <section>
+               <footer class="px-[20px] py-6 flex mobile:flex-col justify-between items-center border bg-pink border-b border-pink mobile:mx-4">
+             <div>
+            <p class="border bg-white my-1 mx1 rounded font-bold px-1 py-1 text-pink mobile:mx-4">KD</p>
+               </div>
+                <div class="flex justify-between items-center gap-[30px]  mobile:block mobile:ms-1">
+                    <i class="text-white far fa-copyright"></i>
+                     <p class="text-white font-semibold">kD schools 2022</p>
+                         <p class="text-white font-semibold">Privacy policy</p>
+                         <p class="text-white font-semibold">Terms of use</p>
+                         </div>
+                         <div class="flex gap-3">
+                             <i class="border rounded-full bg-white my-1 mx1  font-bold px-1 py-1 text-pink fab fa-facebook"></i>
+                                <i class="border rounded-full bg-white my-1 mx1 font-bold px-1 py-1 text-pink fab fa-linkedin"></i>
+                                <i class="border rounded-full bg-white my-1 mx1 font-bold px-1 py-1 text-pink fab fa-twitter"></i>
+                                <i class="border rounded-full bg-white my-1 mx1 font-bold px-1 py-1 text-pink fab fa-instagram"></i>
+                         </div>
+               </footer>
+           </Section>
+        <script src="script.js"></script>
     </main>
 </body>
 </html>
